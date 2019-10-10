@@ -9,14 +9,13 @@ class App extends Component {
 
     this.state = {
       monsters: [],
-      searchField: '',
-      string: 'Hello Raj'
+      searchField: ''
     };
 
   }
 
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => this.setState( {monsters : users}));
   }
